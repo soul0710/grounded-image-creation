@@ -1,0 +1,24 @@
+---
+name: grounded-image-creation
+description: Tạo, chỉnh sửa hoặc tạo lại ảnh bitmap từ ảnh tham chiếu; giữ nguyên màu và tone khi người dùng không yêu cầu đổi, áp dụng kiến thức thẩm mỹ và kiểm chứng chi tiết đời thực khi cần, rồi nhờ agent độc lập xem ảnh cuối trước khi gửi. Không dùng cho SVG hay giao diện dựng bằng code.
+---
+
+# Tạo ảnh có cơ sở thực tế
+
+Tạo hoặc chỉnh sửa ảnh theo ý định người dùng, dùng thẩm mỹ thị giác và kiến thức đúng về thế giới. Dùng skill `imagegen` cho thao tác tạo/chỉnh sửa bitmap. Đọc [visual-aesthetics](../visual-aesthetics/SKILL.md) và đúng tài liệu liên quan trong skill đó khi quyết định bố cục, ánh sáng, màu, hoặc chất liệu. Giữ ưu tiên của người dùng về phong cách và mức độ hiện thực.
+
+## Trước khi tạo
+
+1. Rút prompt thành các yếu tố **phải đúng** (chủ thể, số lượng, vị trí, văn bản, địa danh, niên đại, phong cách kiến trúc), yếu tố có thể sáng tạo, và định dạng đầu ra. Giữ nguyên chi tiết người dùng đã chỉ định; không tự thêm biểu tượng, công trình, người hoặc đạo cụ nổi bật. Với yêu cầu **tạo lại ảnh** hoặc chỉnh sửa từ ảnh gốc, coi ảnh gốc là chuẩn cho bố cục, hình dạng, vị trí, chất liệu, ánh sáng, **màu sắc và tone màu**. Mặc định giữ nguyên cân bằng trắng, quan hệ nóng/lạnh, sắc độ, độ bão hòa, tương phản, độ sáng và cấp màu; chỉ đổi thuộc tính người dùng yêu cầu. Đọc [hướng dẫn tạo lại và so ảnh](references/image-recreation.md).
+2. Nếu prompt chứa địa điểm có thật, công trình cụ thể, kiểu nhà/đồ vật mang đặc trưng vùng và thời kỳ, trang phục lịch sử, hoặc chi tiết chuyên môn dễ sai: nghiên cứu bằng web trước khi tạo. Đọc [quy trình kiểm chứng](references/reality-check.md). Xác định **điểm nhìn và những gì thật sự có thể thấy cùng nhau**; đối chiếu ít nhất một nguồn có thẩm quyền và khi cần một nguồn độc lập khác. Dùng thông tin mới khi hiện trạng có thể đã đổi. Prompt mơ hồ như “nhà truyền thống Mỹ” cần xác định vùng, giai đoạn và kiểu nhà; hỏi nếu lựa chọn đó quyết định kết quả, còn không thì chọn một kiểu đại diện có tên và nêu giả định.
+3. Viết mô tả tạo ảnh bằng chi tiết quan sát được: hình khối, vật liệu, vị trí tương đối, cảnh quan kề bên, ánh sáng, mùa/thời điểm, góc nhìn. Đưa cả điều cần tránh nếu mô hình dễ trộn sai những kiểu tương tự. Liên kết nguồn phục vụ kiểm chứng, nhưng **không trông chờ mô hình tự mở URL**; chuyển phát hiện thành mô tả cụ thể trong prompt.
+4. Dùng nguyên lý thị giác để tạo điểm nhấn và chiều sâu phù hợp mục tiêu. Cân nhắc tính khả thi của ánh sáng, bóng, thời tiết, vật liệu và phối cảnh. Với ảnh gốc, áp dụng kiến thức từ `visual-aesthetics` để **đọc và giữ** các quan hệ thị giác đã có; không tự “nâng cấp” màu, ánh sáng hay độ kịch tính. Không dùng tên máy/ống kính hoặc “8K” thay cho mô tả hình ảnh có ích.
+
+## Tạo, kiểm tra, sửa
+
+5. Tạo hoặc chỉnh sửa bằng công cụ ảnh phù hợp theo `imagegen`. Với ảnh sửa, giữ các chi tiết không được đổi và kiểm tra sau mỗi lần tạo. Xem **ảnh thực tế**, không đánh giá chỉ từ prompt hay lời mô tả của công cụ.
+6. Kiểm tra chủ thể và chi tiết bắt buộc, hình học/quan hệ không gian, ánh sáng, chữ trong ảnh, lỗi tạo hình, thẩm mỹ và sự trung thành với nguồn. Với ảnh tạo lại, **mở và đối chiếu trực tiếp ảnh gốc với ảnh kết quả**, gồm cả màu/tone tổng thể và ở các vùng chính; đổi màu hoặc tone đáng kể khi không được yêu cầu là lỗi cần sửa dù bố cục đúng. Nếu sai, sửa lỗi ưu tiên bằng prompt chỉnh sửa cụ thể rồi xem lại. Không gọi ảnh là “đúng thực tế” nếu góc nhìn hoặc chi tiết then chốt chưa xác minh được.
+7. **Bắt buộc trước câu trả lời cuối:** nếu công cụ cho phép, giữ ảnh ứng viên ở đường dẫn nội bộ đến khi review xong; công cụ có thể tự hiển thị ảnh ngay khi tạo. Giao ảnh mà agent có thể xem được (đường dẫn tệp hoặc ảnh trong ngữ cảnh), prompt/yêu cầu gốc, các ràng buộc chính và nguồn kiểm chứng cho **ít nhất một agent độc lập** review. Với ảnh tạo lại, giao **cả ảnh gốc lẫn ảnh kết quả** và yêu cầu agent báo riêng việc giữ màu/tone theo [hướng dẫn so ảnh](references/image-recreation.md). Agent phải xem chính ảnh đó, đối chiếu checklist trong [quy trình kiểm chứng](references/reality-check.md), và báo lỗi cụ thể hoặc xác nhận không thấy lỗi trọng yếu. Không tính tự review hoặc review chỉ đọc prompt. Nếu sửa ảnh sau review, cho agent review lại bản cuối.
+8. Chỉ gửi bản đã qua review. Nếu không thể huy động agent hoặc agent không thể xem ảnh, nói rõ chưa có review và giữ lại kết quả để xử lý tiếp; không ghi là đã review. Khi gửi, nêu ngắn gọn giả định còn lại và nguồn cho các chi tiết đời thực quan trọng. Nếu ảnh chỉ là diễn giải nghệ thuật, gọi đúng là diễn giải thay vì bản ghi nhận chính xác.
+
+Không áp đặt kiểm chứng địa lý/lịch sử lên cảnh hoàn toàn hư cấu, nhưng vẫn áp dụng bước xem ảnh và agent review. Ưu tiên nguồn gốc chính thức, bản vẽ/tư liệu lưu trữ và ảnh hiện trường có ngữ cảnh; ảnh tìm kiếm không rõ địa điểm là chứng cứ yếu.
