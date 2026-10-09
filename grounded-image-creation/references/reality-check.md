@@ -21,6 +21,8 @@ Ghi ngắn gọn: **điều đã xác minh → nguồn → chi tiết đưa vào
 
 ## Gói giao cho agent review
 
+- [Checklist 8 nhóm lỗi](image-quality-checklist.md): agent xem ảnh thực tế và báo từng nhóm đạt / cần sửa / không áp dụng / chưa xác minh; ghi vị trí lỗi và phân biệt lỗi sẵn có với lỗi phát sinh. Với ảnh sửa, bắt buộc xem cả nguồn và bản cuối, báo riêng màu/tone.
+
 - Prompt gốc và những yếu tố bắt buộc.
 - Đường dẫn ảnh **cuối cùng mà agent mở xem được**; nếu có ảnh tham chiếu, ghi rõ vai trò của từng ảnh.
 - Các phát hiện chính kèm URL nguồn; phân biệt điều chắc chắn và giả định.

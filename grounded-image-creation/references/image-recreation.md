@@ -1,5 +1,7 @@
 # Tạo lại ảnh tham chiếu
 
+Mọi lần chỉnh sửa phải thực hiện [checklist 8 nhóm lỗi](image-quality-checklist.md) trước sửa và sau mỗi lần sửa. Đối chiếu màu/tone dưới đây bổ sung cho checklist, không thay thế việc kiểm tra toàn ảnh và vùng không yêu cầu đổi.
+
 ## Mặc định cần giữ
 
 “Tạo lại ảnh này” nghĩa là tái tạo trung thành ảnh gốc trong giới hạn công cụ. Nếu người dùng không yêu cầu thay đổi, giữ:
