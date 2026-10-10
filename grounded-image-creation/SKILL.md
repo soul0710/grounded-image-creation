@@ -9,6 +9,8 @@ Tạo hoặc chỉnh sửa ảnh theo ý định người dùng, dùng thẩm m�
 
 ## Trước khi tạo
 
+**Mục tiêu hiển thị mặc định cho ảnh ambience của người dùng: TV, xem từ xa và trong thời gian dài.** Đọc [hướng dẫn ảnh ambience cho TV](references/tv-ambience.md) khi tạo/sửa ảnh ambience hoặc người dùng chỉ định TV, và giao tài liệu này cho agent review. Đây là mặc định cho nội dung ambience, không áp lên mọi thể loại ảnh; yêu cầu riêng về thumbnail, điện thoại, in ấn hoặc giữ nguyên ảnh nguồn được ưu tiên.
+
 **Ưu tiên chất lượng:** không bỏ kiểm tra, xem chi tiết, đối chiếu nguồn hoặc review độc lập chỉ để tiết kiệm token/thời gian. Có thể viết báo cáo ngắn và tránh đọc lặp, nhưng phải thực hiện đầy đủ các kiểm tra liên quan. Với ảnh mới, rà đủ 8 nhóm trước tạo để đưa biện pháp phòng lỗi vào prompt, rồi kiểm tra ảnh thực tế sau tạo. Với mọi ảnh, dùng thứ tự ưu tiên và điều kiện giao trong checklist; không coi đẹp tổng thể là đủ nếu sai yêu cầu.
 
 **Bắt buộc khi tạo và sửa ảnh:** đọc [checklist lỗi hình ảnh](references/image-quality-checklist.md). Khi sửa, mở ảnh gốc và kiểm tra đủ 8 nhóm trước khi viết prompt; xác định lỗi cần sửa trong phạm vi yêu cầu và các thuộc tính phải giữ. Sau mỗi lần sửa, kiểm tra lại đủ 8 nhóm trên ảnh thực tế, gồm cả vùng không yêu cầu đổi. Kiểm tra không đồng nghĩa được phép tự sửa mọi điểm trong ảnh gốc.

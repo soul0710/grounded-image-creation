@@ -17,6 +17,8 @@
 
 ## Tiêu chí chất lượng chung cho ảnh mới và ảnh sửa
 
+Với ảnh ambience, mặc định mục tiêu xem là TV theo [tv-ambience.md](tv-ambience.md). Áp dụng tiêu chí đọc rõ từ xa và xem lâu bên cạnh 8 nhóm; chỉ ưu tiên cách đọc thumbnail khi đầu ra thực sự là thumbnail.
+
 ### Tiêu chí bổ sung trong 8 nhóm
 
 - **Nhóm 1 — Thống nhất bối cảnh:** mùa, thời tiết, thời điểm, trang phục và trạng thái đồ vật phải cùng một bối cảnh, trừ ngoại lệ có chủ đích. Kiểm tra ranh giới trong/ngoài, khô/ướt, nóng/lạnh dựa trên dấu hiệu nhìn thấy.
