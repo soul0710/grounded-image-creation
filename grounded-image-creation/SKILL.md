@@ -9,6 +9,8 @@ Tạo hoặc chỉnh sửa ảnh theo ý định người dùng, dùng thẩm m�
 
 ## Trước khi tạo
 
+**Ưu tiên chất lượng:** không bỏ kiểm tra, xem chi tiết, đối chiếu nguồn hoặc review độc lập chỉ để tiết kiệm token/thời gian. Có thể viết báo cáo ngắn và tránh đọc lặp, nhưng phải thực hiện đầy đủ các kiểm tra liên quan. Với ảnh mới, rà đủ 8 nhóm trước tạo để đưa biện pháp phòng lỗi vào prompt, rồi kiểm tra ảnh thực tế sau tạo. Với mọi ảnh, dùng thứ tự ưu tiên và điều kiện giao trong checklist; không coi đẹp tổng thể là đủ nếu sai yêu cầu.
+
 **Bắt buộc khi tạo và sửa ảnh:** đọc [checklist lỗi hình ảnh](references/image-quality-checklist.md). Khi sửa, mở ảnh gốc và kiểm tra đủ 8 nhóm trước khi viết prompt; xác định lỗi cần sửa trong phạm vi yêu cầu và các thuộc tính phải giữ. Sau mỗi lần sửa, kiểm tra lại đủ 8 nhóm trên ảnh thực tế, gồm cả vùng không yêu cầu đổi. Kiểm tra không đồng nghĩa được phép tự sửa mọi điểm trong ảnh gốc.
 
 1. Rút prompt thành các yếu tố **phải đúng** (chủ thể, số lượng, vị trí, văn bản, địa danh, niên đại, phong cách kiến trúc), yếu tố có thể sáng tạo, và định dạng đầu ra. Giữ nguyên chi tiết người dùng đã chỉ định; không tự thêm biểu tượng, công trình, người hoặc đạo cụ nổi bật. Với yêu cầu **tạo lại ảnh** hoặc chỉnh sửa từ ảnh gốc, coi ảnh gốc là chuẩn cho bố cục, hình dạng, vị trí, chất liệu, ánh sáng, **màu sắc và tone màu**. Mặc định giữ nguyên cân bằng trắng, quan hệ nóng/lạnh, sắc độ, độ bão hòa, tương phản, độ sáng và cấp màu; chỉ đổi thuộc tính người dùng yêu cầu. Đọc [hướng dẫn tạo lại và so ảnh](references/image-recreation.md).
